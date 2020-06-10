@@ -1,24 +1,21 @@
 ## Code your solution below. Note that your SQL queries should be in quotation marks. 
 
 def highest_student_gpa
-
-    "SELECT students.gpa FROM students ORDER BY students.gpa DESC LIMIT 1;"
+    "SELECT MAX(gpa) as highest_gpa FROM students"
 end
 
 def lowest_student_gpa
-    "SELECT students.gpa FROM students ORDER BY students.gpa LIMIT 1;"
+    "SELECT MIN(gpa) as lowest_gpa FROM students"
 end
 
 def average_student_gpa
-
-    "SELECT AVG(gpa) FROM students;"
+    "SELECT AVG(gpa) as average_gpa FROM students"
 end
 
 def total_tardies_for_all_students
-    "SELECT SUM(students.tardies) FROM students;"
+    "SELECT SUM(tardies) FROM students"
 end
 
 def average_gpa_for_9th_grade
-
-    "SELECT AVG(students.GPA) FROM students WHERE students.grade == 9;"
+    "SELECT AVG(gpa) FROM students WHERE grade = 9"
 end
